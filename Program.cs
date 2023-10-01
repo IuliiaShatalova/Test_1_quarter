@@ -1,5 +1,25 @@
 ﻿string [] array = {"left", "see", "^_^", "Julia", "you"};
-string [] array2 = new string [array.Length];
+
+int size = getArrayLength();
+string [] array2 = new string [size];
+find3CharStrings();
+printArray();
+Console.WriteLine();
+printArray2();
+
+
+int getArrayLength()
+    {
+        int length = 0;
+        for (int i = 0; i < array.Length; i++)
+        {
+             if (array[i].Length <= 3)
+            {
+                length ++;
+            }
+        }
+        return length;
+    }
 
 string [] find3CharStrings ()
     {
@@ -31,10 +51,6 @@ void printArray2()
         }
     }
 
-find3CharStrings();
-printArray();
-Console.WriteLine();
-printArray2();
 
 
         
